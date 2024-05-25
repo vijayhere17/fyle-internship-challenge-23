@@ -1,0 +1,16 @@
+/* app.component.scss */
+.skeleton-loader {
+    background: linear-gradient(to right, #f6f7f8 0%, #e9ecef 50%, #f6f7f8 100%);
+    background-size: 200% auto;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
