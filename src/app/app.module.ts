@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from  '@angular/common/http';
+import { CacheService } from './services/cache.service'; // Import CacheService
+import { ApiService } from './services/api.service'; // Import ApiService
 
 @NgModule({
   declarations: [
@@ -10,9 +13,10 @@ import { HttpClientModule } from  '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule // Add FormsModule here
   ],
-  providers: [],
+  providers: [CacheService, ApiService], // Provide CacheService and ApiService here
   bootstrap: [AppComponent]
 })
 export class AppModule { }
